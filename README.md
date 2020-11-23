@@ -31,3 +31,5 @@
 
 - [云开发文档](https://docs.cloudbase.net/)
 - [Towxml文档](https://github.com/sbfkcel/towxml/wiki)
+- [Omi](https://github.com/Tencent/omi)
+- [Parser富文本插件](https://github.com/jin-yufeng/Parser)
