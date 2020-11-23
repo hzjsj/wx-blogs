@@ -1,0 +1,24 @@
+<!-- 首页搜索 -->
+<view class="cu-bar bg-white search fixed">
+  	<view class="search-form round">
+  		<text class="cuIcon-search"></text>
+  		<input type="text" bindblur="search" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  	</view>
+  	<view class="action">
+  		<button class="cu-btn bg-blue round">搜索</button>
+  	</view>
+</view>
+
+<!-- 文章列表 -->
+<view class="cu-card dynamic no-card">
+ <view wx:for="{{blogs}}" wx:key="index"  bindtap="desc" data-id="{{item._id}}" class="cu-item shadow solids-bottom">
+    <view class='text-content margin-top-sm'>{{item.title}}</view>
+    <view class="grid col-1 flex-sub padding-lr">
+      <view class="bg-img only-img" style="background-image:url({{item.cover}})"></view>
+    </view>
+    <view class='text-gray text-sm text-right padding'>
+      <text class="cuIcon-timefill"></text>
+      {{item.createTime}}
+    </view>
+  </view>
+</view>

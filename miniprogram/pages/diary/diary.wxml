@@ -1,0 +1,12 @@
+<view class="cu-timeline" wx:for="{{diary}}" wx:key="index">
+	<view class="cu-time">{{item.date}}</view>
+	<view class="cu-item text-{{item.color}}">
+		<view class="content bg-{{item.color}}">
+			<view class="k_flex">
+				<text>{{item.time}}</text>
+			</view>
+			<view class="margin-top">{{item.diary}}</view>
+			<image wx:if="{{item.photo}}" class="margin-top" src="{{item.photo}}" bindtap="viewImage" data-photo="{{item.photo}}" mode="scaleToFill"></image>
+		</view>
+	</view>
+</view>
