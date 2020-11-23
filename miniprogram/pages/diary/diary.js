@@ -17,8 +17,9 @@ Page({
       skip:0
     })
     this.getDiary()
-  //  this.getTask()
   },
+
+  //获取记录列表
   getDiary:function(callback){
     wx.showLoading({
       title: '数据加载中',

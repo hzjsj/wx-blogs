@@ -19,6 +19,8 @@ Page({
   onLoad: function (options) {
     this.getBlogs()
   },
+
+  // 获取文章列表
   getBlogs:function(callback){
     wx.showLoading({
       title: '加载中',
@@ -61,11 +63,14 @@ Page({
     })
     
   },
-desc:function(e){
-  wx.navigateTo({
-    url: '../desc/desc?id=' + e.currentTarget.dataset.id
-  })
-},
+
+  //跳转到详情页
+  desc:function(e){
+    wx.navigateTo({
+      url: '../desc/desc?id=' + e.currentTarget.dataset.id
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
