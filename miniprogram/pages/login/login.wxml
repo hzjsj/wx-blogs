@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view class="userinfo-avatar" bindtap="bindViewTap">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="k_text padding">
+      <open-data type="userNickName"></open-data>
+    </view>
+
+    <view class="text-df text-grey">将使用微信登入此网站</view>
+
+    <view class="padding-xl margin-top-xl"  wx:if="{{!isLogin}}">
+      <button class="cu-btn block  bg-blue  lg k_button" bindtap="getUserProfile"> 确认登入</button>
+    </view>
+    <view class="padding-xl margin-top-xl"  wx:if="{{isLogin}}">
+      <text> 你已经成功登入！</text>
+    </view>
+
+    <view class="text-df text-blue">
+      <navigator open-type="exit" target="miniProgram">关闭</navigator>
+    </view>
+  </view>
+</view>
